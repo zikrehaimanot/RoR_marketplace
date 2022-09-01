@@ -17,9 +17,13 @@ ActiveAdmin.register Item do
 
   permit_params :name, :price
 
+  member_action :auto_create_order, method: :patch do
+    Order.create!(item_id: resource.id)
+  end
 
- action_item :buy_item do
-   link_to 'Buy Item'
+
+ action_item :only => :show do
+   link_to 'Buy Item', auto_create_order_admin_item_path, method: :patch
  end
 
 end
