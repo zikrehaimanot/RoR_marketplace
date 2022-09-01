@@ -25,6 +25,8 @@ gem 'validates_email_format_of'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'activeadmin'
+gem 'pry-rails'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
