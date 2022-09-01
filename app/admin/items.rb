@@ -1,4 +1,4 @@
-ActiveAdmin.register User do
+ActiveAdmin.register Item do
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -15,6 +15,11 @@ ActiveAdmin.register User do
   #   permitted
   # end
 
-  permit_params :email, :name
+  permit_params :name, :price
+
+
+ action_item :buy_item do
+   link_to 'Buy Item'
+ end
 
 end
